@@ -89,10 +89,10 @@
    cd ecs_work/myflask
    ```
    
-1. 左側に表示されている階層構造から myflask1/app フォルダの app.py を開いて、サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
+1. 左側に表示されている階層構造から myflask/app フォルダの app.py を開いて、サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
 
 
-1. myflask1 フォルダの Dockerfile を確認します。
+1. myflask フォルダの Dockerfile を確認します。
    - この Dockerfile を使用してコンテナのイメージをビルドします。
 
 
