@@ -162,7 +162,13 @@
    docker push ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
    ````
 
-1. AWS マネジメントコンソールで Amazon ECR のページを表示し、リポジトリにイメージがプッシュされたことを確認します。
+1. ページ上部の **検索** に `elastic container registory` と入力して Enter キーを押下し、Amazon ECR のページに移動します。
+
+1. ナビゲーションメニューが表示されていない場合は、ページ左上の三本線のアイコンをクリックします。
+
+1. ナビゲーションメニューで **Private registry** の **Repositories** をクリックします。
+
+1. リポジトリにイメージがプッシュされたことを確認します。
 
 
 1. 次の手順に備えて、下記のコマンドで表示されるイメージ URI をメモしておきます。
