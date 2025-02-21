@@ -46,22 +46,19 @@
    cd ecs_work/myflask1
    ```
    
-1. サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
-   ```
-   cat app/app.py
-   ```   
+1. 左側に表示されている階層構造から myflask1/app フォルダの app.py を開いて、サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
 
-1. サンプルアプリケーションのコンテナイメージをビルドするための Dockerfile を確認します。
-   ```
-   cat Dockerfile
-   ```   
 
-1. サンプルアプリケーションのコンテナイメージをビルドします。
+1. myflask1 フォルダの Dockerfile を確認します。
+   - この Dockerfile を使用してコンテナのイメージをビルドします。
+
+
+1. 下記のコマンドでコンテナイメージをビルドします。
    ```
    docker build -t myflask:1 . 
    ```   
 
-1. サンプルアプリケーションのコンテナを実行します。
+1. 下記のコマンドでコンテナを実行します。
    ```
    docker run --name myflask1 -dit -p 80:8080 myflask:1
    ```   
@@ -98,8 +95,9 @@
 1. ターミナルで下記のコマンドを実行し、Amazon ECR のリポジトリ myflask1 を作成します。
 
    ```
-   aws ecr create-repository --repository-name myflask1 --region ${REGION}
+   aws ecr create-repository --repository-name myflask --region ${REGION}
    ```
+   - **実行後、プロンプトが戻らない場合はキーボードの q キーを押下して下さい。**
 
 1. 認証トークンを取得し、レジストリに対して Docker クライアントを認証します。
 
@@ -110,13 +108,13 @@
 1. リポジトリにイメージをプッシュできるように、イメージにタグを付けます。
 
    ````
-   docker tag myflask1:latest ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask1:latest
+   docker tag myflask:1  ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
    ````
 
 1. リポジトリにこのイメージをプッシュします。
 
    ````
-   docker push ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask1:latest
+   docker push ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
    ````
 
 1. AWS マネジメントコンソールで Amazon ECR のページを表示し、リポジトリにイメージがプッシュされたことを確認します。
@@ -125,7 +123,7 @@
 1. 次の手順に備えて、下記のコマンドで表示されるイメージ URI をメモしておきます。
 
     ````
-     echo ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask1:latest
+    echo ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
     ````
 
 #### 3. Amazon ECS タスク定義の作成
@@ -137,12 +135,12 @@
 
 1. **新しいタスク定義の作成** をクリックして、さらに **新しいタスク定義の作成** をクリックします。
 
-1. **タスク定義ファミリー** に `myflask1` と入力します。
+1. **タスク定義ファミリー** に `myflask` と入力します。
 
 1. **インフラストラクチャの要件** で **起動タイプ** に **Fargate** を選択します。
 
 1. ページを少し下にスクロールし、**コンテナ - 1** で下記を入力します。
-    - **名前** に `myflask1` と入力
+    - **名前** に `myflask` と入力
     - **イメージ URI** にメモしておいた イメージ URI を入力
     - **ポートマッピング** で **コンテナポート** に `8080` を入力
     - 上記以外はデフォルトのままにします。
@@ -172,7 +170,7 @@
 
 1. ページを少し下にスクロールし、**デプロイ設定** セクションを表示します。
 
-1. **ファミリー** で **myflask1** を選択します。
+1. **ファミリー** で **myflask** を選択します。
 
 1. **サービス名** に `my-service` と入力します。
 
