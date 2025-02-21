@@ -89,7 +89,9 @@
    cd ecs_work/myflask
    ```
    
-1. 左側に表示されている階層構造から myflask/app フォルダの app.py を開いて、サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
+1. 左側でエクスプローラーのアイコンをクリックします。
+
+1. ecs-work/myflask/app フォルダの app.py を開いて、サンプルのアプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
 
 
 1. myflask フォルダの Dockerfile を確認します。
