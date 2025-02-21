@@ -86,7 +86,7 @@
 1. サンプルのフォルダに移動します。
 
    ```
-   cd ecs_work/myflask1
+   cd ecs_work/myflask
    ```
    
 1. 左側に表示されている階層構造から myflask1/app フォルダの app.py を開いて、サンプルの アプリケーションのコードを確認します。(Python で Flask という Webアプリケーションフレームワークを使用しています。）
