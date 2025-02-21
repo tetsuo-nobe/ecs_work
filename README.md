@@ -32,7 +32,7 @@
 
 1. **スタックの作成** から **新しいリソースを使用（標準）** を選択します。
 
-1. **テンプレートの指定** セクションで **Amazon S3 URL** を選択します。
+1. **テンプレートの指定** セクションで **テンプレートソース** に **Amazon S3 URL** を選択します。
 
 1. **Amazon S3 URL** に下記を入力します。
     - `https://tnobep-work-public.s3-ap-northeast-1.amazonaws.com/ecs-work/ecs_work_main.yaml`
