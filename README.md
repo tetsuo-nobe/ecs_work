@@ -163,7 +163,7 @@
    docker push ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
    ````
 
-1. ページ上部の **検索** に `elastic container registory` と入力して Enter キーを押下し、Amazon ECR のページに移動します。
+1. AWS マネジメントコンソールのページに切り替え、ページ上部の **検索** に `elastic container registory` と入力して Enter キーを押下し、Amazon ECR のページに移動します。
 
 1. ナビゲーションメニューが表示されていない場合は、ページ左上の三本線のアイコンをクリックします。
 
