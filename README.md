@@ -138,7 +138,7 @@
    REGION=ap-northeast-1
    ```
 
-1. ターミナルで下記のコマンドを実行し、Amazon ECR のリポジトリ myflask1 を作成します。
+1. ターミナルで下記のコマンドを実行し、Amazon ECR のリポジトリ myflask を作成します。
 
    ```
    aws ecr create-repository --repository-name myflask --region ${REGION}
