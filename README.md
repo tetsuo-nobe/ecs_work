@@ -102,6 +102,11 @@
 1. 下記のコマンドでコンテナイメージをビルドします。
    ```
    docker build -t myflask:1 . 
+   ```
+   
+1. 下記のコマンドでイメージの情報を表示します。
+   ```
+   docker images 
    ```   
 
 1. 下記のコマンドでコンテナを実行します。
@@ -156,6 +161,11 @@
    ````
    docker tag myflask:1  ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
    ````
+
+1. 下記のコマンドでイメージの情報を表示します。
+   ```
+   docker images 
+   ```   
 
 1. リポジトリにこのイメージをプッシュします。
 
