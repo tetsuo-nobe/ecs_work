@@ -57,7 +57,7 @@
 
 1. AWS マネジメントコンソールで CloudShell を起動します。
 
-
+![](images/cloudshell.png)
 
 1. ターミナル で下記のコマンドを実行し、Docker がインストールされていることを確認します。
    - 貼り付け時、[許可] を求められた場合は許可して下さい。
@@ -180,6 +180,8 @@
     ````
     echo ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/myflask:latest
     ````
+    
+1. CloudShell を閉じます。
 
 ### 3. Amazon ECS タスク定義の作成
 
